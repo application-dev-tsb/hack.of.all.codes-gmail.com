@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: info.startupbuilder
+---
+testFramework: junit
+sourceLanguage: java
