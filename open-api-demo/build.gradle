@@ -2,7 +2,7 @@ plugins {
     id("org.jetbrains.kotlin.jvm") version "1.6.21"
     id("org.jetbrains.kotlin.kapt") version "1.6.21"
     id("org.jetbrains.kotlin.plugin.allopen") version "1.6.21"
-    id("groovy") 
+    id("groovy")
     id("com.github.johnrengelman.shadow") version "7.1.2"
     id("io.micronaut.application") version "3.5.1"
 }
@@ -10,7 +10,6 @@ plugins {
 version = "0.1"
 group = "com.demo.openapi"
 
-val kotlinVersion=project.properties.get("kotlinVersion")
 repositories {
     mavenCentral()
 }
@@ -61,7 +60,7 @@ tasks {
         images = ["${System.env.DOCKER_IMAGE ?: project.name}:$project.version"]
     }
 }
-graalvmNative.toolchainDetection.set(false)
+graalvmNative.toolchainDetection = false
 micronaut {
     runtime("netty")
     testRuntime("spock2")
@@ -70,6 +69,3 @@ micronaut {
         annotations("com.demo.openapi.*")
     }
 }
-
-
-
