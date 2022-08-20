@@ -3,6 +3,7 @@ package com.demo.openapi
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 import io.micronaut.http.annotation.Post
+import io.micronaut.http.annotation.Put
 import io.swagger.v3.oas.annotations.tags.Tag
 
 
@@ -16,5 +17,10 @@ class DemoController {
     @Post
     fun create(demo: Demo): Demo {
         return Demo(123, demo.name)
+    }
+
+    @Put("{id}")
+    fun update(id: Long, demo: Demo): Demo {
+        return Demo(id, demo.name)
     }
 }
