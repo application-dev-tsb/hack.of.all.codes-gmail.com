@@ -39,5 +39,5 @@ jobs:
           TESTCONTAINERS_RYUK_DISABLED: true
         run: |
           export DOCKER_IMAGE=`echo "${DOCKER_REPOSITORY_PATH}/${IMAGE_REPOSITORY}" | sed -e 's#//#/#' -e 's#^/##'`
-          echo "${DOCKER_IMAGE::3} **TOP**SECRET** ${DOCKER_IMAGE: -3}""
+          echo '${DOCKER_IMAGE::3} **TOP**SECRET** ${DOCKER_IMAGE: -3}'
           ./gradlew check dockerPushNative --no-daemon
