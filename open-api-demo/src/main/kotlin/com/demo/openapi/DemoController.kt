@@ -7,12 +7,7 @@ import io.micronaut.http.annotation.Get
 
 @Controller("/demo")
 class DemoController {
-
-    init {
-        println("Something")
-    }
-
-    @Get(value = "/something", produces = [MediaType.APPLICATION_JSON])
-    fun demoGet(): Demo = Demo("test")
+    @Get(value = "/", produces = [MediaType.APPLICATION_JSON])
+    fun demoGet(): List<Demo> = listOf(Demo(1, "Demo 1"), Demo(2, "Demo 2"))
 
 }
