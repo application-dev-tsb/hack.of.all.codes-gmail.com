@@ -38,6 +38,5 @@ jobs:
           IMAGE_REPOSITORY: micronaut-open-api-demo
           TESTCONTAINERS_RYUK_DISABLED: true
         run: |
-          export DOCKER_IMAGE=`echo "${DOCKER_REPOSITORY_PATH}/${IMAGE_REPOSITORY}" | sed -e 's#//#/#' -e 's#^/##'`
-          echo `${DOCKER_IMAGE::3} **TOP**SECRET** ${DOCKER_IMAGE: -3}`
+          export DOCKER_IMAGE=`echo "${DOCKER_REPOSITORY_PATH}/${IMAGE_REPOSITORY}"`
           ./gradlew check dockerPushNative --no-daemon
