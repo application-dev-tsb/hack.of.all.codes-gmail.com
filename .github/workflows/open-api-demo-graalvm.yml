@@ -7,6 +7,8 @@ defaults:
   run:
     working-directory: ./open-api-demo
 jobs:
+# TODO: add step to test before publishing
+# https://medium.com/@liams_o/postman-tests-in-github-actions-pipeline-cd0adadf3dd2
   build:
     runs-on: ubuntu-latest
     steps:
