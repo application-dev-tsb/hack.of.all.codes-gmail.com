@@ -1,9 +1,8 @@
 package com.example.core;
 
-import lombok.Value;
+public record Person(Long id, String name) {
 
-@Value
-public class Person {
-
-    String name;
+    Person(String name) {
+        this(null, name);
+    }
 }

@@ -15,4 +15,15 @@ class PersonSpec extends Specification {
         result == "John Doe"
     }
 
+    def "insert spec here"() {
+        given: "insert setup here"
+        def sut = new Object()
+
+        when: "describe the execution steps"
+        def result = sut.toString()
+
+        then: "describe assertion"
+        result == "expected value"
+    }
+
 }
