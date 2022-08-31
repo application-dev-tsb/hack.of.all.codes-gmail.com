@@ -39,6 +39,26 @@ class RomanNumeralConverterSpec extends Specification {
         letters     | expectedResult
         "IX"        | 9
         "IV"        | 4
+        "XXV"       | 25
+        "XXXVI"     | 36
+        "MXXIII"    | 1023
+        "DXLII"     | 542
+    }
+
+    def "should reduce the number in the front if previous is higher or equals"(String letters, Integer expectedResult) {
+        given:
+        RomanNumeralConverter converter = new RomanNumeralConverter()
+
+        when:
+        def converted = converter.convertToInteger( letters )
+
+        then:
+        converted == expectedResult
+
+        where:
+        letters     | expectedResult
+        "III"       | 3
+        "XII"       | 12
     }
 
 

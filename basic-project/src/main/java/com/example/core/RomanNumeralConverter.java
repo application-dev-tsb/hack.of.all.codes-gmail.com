@@ -3,18 +3,22 @@ package com.example.core;
 public class RomanNumeralConverter {
 
     Integer convertToInteger(String romanNumeral) {
+        if (romanNumeral.isEmpty()) return 0;
         if (romanNumeral.length() == 1) {
             return convertSingleDigit(romanNumeral);
         }
 
-        Integer tail = convertToInteger(romanNumeral.substring(0, romanNumeral.length()-1));
-        Integer head = convertToInteger(romanNumeral.substring(romanNumeral.length()-1));
+        Integer left = convertToInteger(romanNumeral.substring(0, 1));
+        Integer right = convertToInteger(romanNumeral.substring(1, 2));
+        Integer remaining = romanNumeral.length() > 2
+                ? convertToInteger(romanNumeral.substring(2))
+                : 0;
 
-        if (head > tail) {
-            return head - tail;
+        if (right > left) {
+            return right - left + remaining;
         }
 
-        return 1;
+        return right + left + remaining;
     }
 
     private Integer convertSingleDigit(String digit) {
