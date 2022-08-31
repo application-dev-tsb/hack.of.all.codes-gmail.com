@@ -24,4 +24,22 @@ class RomanNumeralConverterSpec extends Specification {
         "D"     | 500
         "M"     | 1000
     }
+
+    def "should reduce the number in the front if previous is lower"(String letters, Integer expectedResult) {
+        given:
+        RomanNumeralConverter converter = new RomanNumeralConverter()
+
+        when:
+        def converted = converter.convertToInteger( letters )
+
+        then:
+        converted == expectedResult
+
+        where:
+        letters     | expectedResult
+        "IX"        | 9
+        "IV"        | 4
+    }
+
+
 }

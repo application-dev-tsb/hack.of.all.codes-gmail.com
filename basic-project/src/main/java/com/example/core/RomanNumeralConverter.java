@@ -7,6 +7,13 @@ public class RomanNumeralConverter {
             return convertSingleDigit(romanNumeral);
         }
 
+        Integer tail = convertToInteger(romanNumeral.substring(0, romanNumeral.length()-1));
+        Integer head = convertToInteger(romanNumeral.substring(romanNumeral.length()-1));
+
+        if (head > tail) {
+            return head - tail;
+        }
+
         return 1;
     }
 
