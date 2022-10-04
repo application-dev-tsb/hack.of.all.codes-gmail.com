@@ -7,5 +7,5 @@ import io.micronaut.http.annotation.Get
 class AccountRESTAPI {
 
     @Get(uri = "/{id}")
-    fun getAccount(id: Long): Account = Account(1, "test")
+    fun getAccount(id: Long): Account = Account(id, "test")
 }
