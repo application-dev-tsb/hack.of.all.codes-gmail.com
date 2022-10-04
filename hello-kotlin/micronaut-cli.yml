@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.example.hello
+testFramework: spock
+sourceLanguage: kotlin
+buildTool: gradle
+features: [annotation-api, app-name, data, data-r2dbc, gradle, h2, http-client, jackson-databind, kotlin, kotlin-application, kotlin-build, logback, micronaut-build, netty-server, openapi, r2dbc, readme, shade, spock, vertx-pg-client, yaml]
