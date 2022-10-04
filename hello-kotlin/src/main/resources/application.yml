@@ -1,6 +1,8 @@
 micronaut:
   application:
     name: helloKotlin
+  server:
+    port: 9999
 vertx:
   pg:
     client:
@@ -22,3 +24,4 @@ netty:
   default:
     allocator:
       max-order: 3
+
