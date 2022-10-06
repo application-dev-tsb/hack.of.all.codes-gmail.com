@@ -1,6 +1,6 @@
 package com.example.hello.core.usecases
 
-import com.example.hello.Account
+import com.example.hello.core.Account
 
 interface AccountManagementUserCase {
 

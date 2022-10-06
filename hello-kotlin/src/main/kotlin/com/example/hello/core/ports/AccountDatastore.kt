@@ -1,6 +1,6 @@
 package com.example.hello.core.ports
 
-import com.example.hello.Account
+import com.example.hello.core.Account
 
 interface AccountDatastore {
 
