@@ -2,15 +2,17 @@ package com.example.hello.core.usecases.impl
 
 import com.example.hello.core.Account
 import com.example.hello.core.ports.AccountDatastore
-import com.example.hello.core.usecases.AccountManagementUserCase
+import com.example.hello.core.usecases.AccountManagementUseCase
+import jakarta.inject.Inject
 import jakarta.inject.Singleton
 
 @Singleton
-class DefaultAccountManagementUseCase : AccountManagementUserCase {
+class DefaultAccountManagementUseCase : AccountManagementUseCase {
 
+    @Inject
     lateinit var accountDatastore: AccountDatastore
 
     override fun showAccountInformation(id: Long): Account {
-        TODO("Not yet implemented")
+        return Account(id, "test")
     }
 }
