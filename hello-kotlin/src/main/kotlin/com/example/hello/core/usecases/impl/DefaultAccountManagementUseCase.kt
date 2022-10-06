@@ -13,6 +13,6 @@ class DefaultAccountManagementUseCase : AccountManagementUseCase {
     lateinit var accountDatastore: AccountDatastore
 
     override fun showAccountInformation(id: Long): Account {
-        return Account(id, "test")
+        return accountDatastore.findById(id)
     }
 }

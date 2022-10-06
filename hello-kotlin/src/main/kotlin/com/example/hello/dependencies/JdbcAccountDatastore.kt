@@ -7,6 +7,6 @@ import jakarta.inject.Singleton
 @Singleton
 class JdbcAccountDatastore : AccountDatastore {
     override fun findById(id: Long): Account {
-        TODO("Not yet implemented")
+        return Account(id, "test123")
     }
 }
