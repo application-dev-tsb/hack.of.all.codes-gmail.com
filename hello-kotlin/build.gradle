@@ -29,6 +29,8 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("io.r2dbc:r2dbc-h2")
+    runtimeOnly("io.r2dbc:r2dbc-postgresql:0.8.13.RELEASE")
+    runtimeOnly("org.postgresql:postgresql")
     implementation("io.micronaut:micronaut-validation")
 
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
