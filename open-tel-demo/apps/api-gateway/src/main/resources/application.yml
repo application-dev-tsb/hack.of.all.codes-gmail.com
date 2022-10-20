@@ -10,7 +10,10 @@ datasources:
     username: test_user
     password: test_password
     url: 'jdbc:postgresql:postgres'
-redis.uri: redis://localhost
+redis:
+  uri: redis://localhost
+  password: myredispasswordISn0Ts3Cure
+
 netty:
   default:
     allocator:
