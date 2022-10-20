@@ -5,8 +5,11 @@ datasources:
   default:
     driverClassName: org.postgresql.Driver
     db-type: postgresql
-    schema-generate: CREATE_DROP
+    schema-generate: NONE
     dialect: POSTGRES
+    username: test_user
+    password: test_password
+    url: 'jdbc:postgresql:postgres'
 redis.uri: redis://localhost
 netty:
   default:
